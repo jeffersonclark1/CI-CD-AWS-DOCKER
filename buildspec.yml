@@ -41,11 +41,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...          
+      - echo Building the Docker image...      
       - docker build -t arara-frota-emissao .
-      - docker tag arara-frota-emissao:latest 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao:latest      
+      - docker tag arara-frota-emissao:latest 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao
+      - docker push 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao:latest
