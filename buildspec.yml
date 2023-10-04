@@ -37,7 +37,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - echo $AWS_DEFAULT_REGION
-      - aws ecr get-login-password --region sa-east-1
+      - aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin 266583958309.dkr.ecr.sa-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
@@ -48,4 +48,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao:latest
+      - docker push 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao
