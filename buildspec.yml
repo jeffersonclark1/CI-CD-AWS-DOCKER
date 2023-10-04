@@ -50,6 +50,6 @@ phases:
       - echo Pushing the Docker image...
       - docker push 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao
       - echo write definitions file...
-      - printf '[{"name":"arara-emissao-frota-pipeline","imageUri":"%s"}]' 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao > imagedefinitions.json
+      - printf '[{"name":"arara-emissao-frota","imageUri":"%s"}]' 266583958309.dkr.ecr.sa-east-1.amazonaws.com/arara-frota-emissao > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
